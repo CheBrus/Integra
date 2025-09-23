@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import { LayoutSetting } from './core/settings/layout-setting';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,5 @@ import { ButtonModule } from 'primeng/button';
 })
 export class App {
   protected readonly title = signal('IntegraFrontend');
+  layoutService = inject(LayoutSetting);
 }
